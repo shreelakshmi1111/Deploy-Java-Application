@@ -1,0 +1,45 @@
+---
+# Source: productcatalogue/templates/deployment.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: default
+  labels:
+    helm.sh/chart: productcatalogue-0.1.0
+    app.kubernetes.io/name: productcatalogue
+    app.kubernetes.io/instance: test
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+  name: "productcatalogue"
+spec:
+  selector:
+    app.kubernetes.io/name: productcatalogue
+    app.kubernetes.io/instance: test
+  type: NodePort
+  ports:
+  - name: productcatalogue
+    protocol: TCP
+    port: 8020
+    targetPort: 8020
+---
+# Source: productcatalogue/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-productcatalogue
+  labels:
+    helm.sh/chart: productcatalogue-0.1.0
+    app.kubernetes.io/name: productcatalogue
+    app.kubernetes.io/instance: test
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  type: NodePort
+  ports:
+    - port: 8020
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: productcatalogue
+    app.kubernetes.io/instance: test
