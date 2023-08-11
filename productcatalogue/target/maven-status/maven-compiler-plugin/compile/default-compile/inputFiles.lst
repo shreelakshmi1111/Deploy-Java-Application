@@ -1,6 +1,0 @@
-D:\Docker\docker-Java-kubernetes-project\productcatalogue\src\main\java\uk\co\danielbryant\djshopping\productcatalogue\model\Product.java
-D:\Docker\docker-Java-kubernetes-project\productcatalogue\src\main\java\uk\co\danielbryant\djshopping\productcatalogue\services\ProductService.java
-D:\Docker\docker-Java-kubernetes-project\productcatalogue\src\main\java\uk\co\danielbryant\djshopping\productcatalogue\healthchecks\BasicHealthCheck.java
-D:\Docker\docker-Java-kubernetes-project\productcatalogue\src\main\java\uk\co\danielbryant\djshopping\productcatalogue\ProductServiceApplication.java
-D:\Docker\docker-Java-kubernetes-project\productcatalogue\src\main\java\uk\co\danielbryant\djshopping\productcatalogue\configuration\ProductServiceConfiguration.java
-D:\Docker\docker-Java-kubernetes-project\productcatalogue\src\main\java\uk\co\danielbryant\djshopping\productcatalogue\resources\ProductResource.java
